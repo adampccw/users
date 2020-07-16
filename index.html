@@ -1,0 +1,18 @@
+<script>
+function load(){
+var name ="UserName";
+if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+var uname = decodeURIComponent(name[1]);
+if(uname != undefined)
+document.getElementById("UserLabel").innerHTML  ="Hello "+uname+" , Have a nice day!!";
+
+}
+</script>
+
+<html>
+<body onload="load();">
+      <div>
+          <label id="UserLabel" style="color: #0026ff">Hello, please tell me you name.</label> 
+      </div>
+</body>
+</html>
